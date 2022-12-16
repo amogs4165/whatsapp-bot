@@ -27,7 +27,7 @@ let messageContent = [
   client.on('message', message => { 
     console.log("message", message); 
     // let content = messageContent[Math.floor(Math.random() * messageContent.length)]; 
-    let content = `Hi ${message.notifyName}, Amogh is currently busy please leave a message`
+    let content = `Hi ${message._data.notifyName}, Amogh is currently busy please leave a message`
     if ((message.body || message.hasMedia) && message.author === undefined) { 
       client.sendMessage(message.from, content); 
     } 
