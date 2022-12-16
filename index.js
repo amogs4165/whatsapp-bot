@@ -18,7 +18,7 @@
     console.log("message", message); 
     // let content = messageContent[Math.floor(Math.random() * messageContent.length)]; 
     let content = `Hi ${message._data.notifyName}, Amogh is currently busy please leave a message`
-    if ((message.body || message.hasMedia) && message.author === undefined && !recentContact.includes(message._data.notifyName) && message._data.notifyName{ 
+    if ((message.body || message.hasMedia) && message.author === undefined && !recentContact.includes(message._data.notifyName) && message._data.notifyName) { 
       client.sendMessage(message.from, content);
       recentContact.push(message._data.notifyName);
     } 
