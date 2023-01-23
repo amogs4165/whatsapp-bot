@@ -21,8 +21,8 @@ try {
   }); 
     
   client.on('message',  async (message) => { 
-    if(message.body && message.body.includes('@chatgpt')) {
-      const ms = message.body.substring(8);
+    if(message.body && message.body.includes('@raj')) {
+      const ms = message.body.substring(4);
       const {data} =  await openai.createCompletion({
         model: "text-davinci-003",
         prompt: ms,
